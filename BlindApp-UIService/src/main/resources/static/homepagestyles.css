@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end; /* Center align the welcome message */
+    align-items: end; /* Vertically center the welcome message */
+}
+.left-sidebar{
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 10%; /* Left-sidebar occupies 20% of the screen */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-content {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 85%; /* Left-sidebar occupies 20% of the screen */
+    ooverflow-y: scroll; /* Add scrollbar from top to bottom */
+    overscroll-behavior: contain;
+}
+.footer {
+    background-color: #f0f0f0;
+    padding: 5px;
+    text-align: center;
+}
+.table {
+    table-layout: fixed;
+}
+.content-wrapper {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Space between content-wrapper and footer */
+    flex: 1; /* Fill remaining vertical space */
+}
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 1px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 82vw; /* Make the card span across the main-content */
+}
+.card-footer2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 5px;
+    text-align: center;
+}
+.card-footer1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.content-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.content {
+    margin-bottom: 10px;
+}
+.likes {
+    color: #888;
+}
+.watermark {
+    font-size: 10px;
+    color: #888;
+}
+form {
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+pre {
+    white-space: pre-wrap;
+}

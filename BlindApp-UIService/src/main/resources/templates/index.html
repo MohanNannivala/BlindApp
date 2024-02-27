@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to Ooothla!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+            src="https://unpkg.com/htmx.org@1.9.10"
+            integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+            crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="indexstyles.css" />
+</head>
+<body>
+<form id="container">
+    <pre>
+                            "🎉 Welcome to Ooothla! 🎉
+
+        Step into the hottest destination for anonymous chats and workplace adventures! 😎 Inspired by the iconic Blind, we're your ultimate playground for candid conversations and networking masterstrokes. Picture this: You're at a crossroads in your career, unsure which path to take. With Ooothla, you can seek advice from experienced professionals without revealing your identity, gaining valuable insights to propel your career forward. Or perhaps you've stumbled upon some juicy office gossip and need to share without the risk of getting caught. Ooothla provides a safe space for you to spill the tea, connecting you with colleagues who understand the game without revealing your identity. 🌟 Join our vibrant community and let's conquer the professional realm together! 💼 No masks, no filters—just real talk and real connections! Don't miss out on the fun, jump aboard the Ooothla train now! 🚀"
+    </pre>
+    <div class="btn-container">
+        <button type="button"
+                hx-get="http://localhost:8082/login"
+                hx-target="#container"
+                hx-swap="outerHTML"
+                hx-push-url="true"
+        >Log in</button>
+        <button type="button"
+                hx-get="http://localhost:8082/signup"
+                hx-target="#container"
+                hx-swap="outerHTML"
+                hx-push-url="true"
+        >Sign up</button>
+    </div>
+</form>
+</body>
+</html>

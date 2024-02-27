@@ -1,0 +1,24 @@
+<form id="container">
+<div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+</div>
+<br/>
+<div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+</div>
+<br/>
+<div>
+<!--    <button type="submit"-->
+<!--            hx-get="http://localhost:8082/back"-->
+<!--            hx-target="#container"-->
+<!--            hx-swap="innerHTML"-->
+<!--    >back</button>-->
+    <button type="submit"
+            hx-post="http://localhost:8082/signup"
+            hx-target="#container"
+            hx-swap="outerHTML"
+    >Signup</button>
+</div>
+</form>

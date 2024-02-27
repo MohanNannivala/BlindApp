@@ -1,0 +1,37 @@
+<div class="main-content" id="container">
+    <!-- Main content goes here -->
+    <table class="table">
+        <tr>
+            <td>
+                <div th:each="article : ${articles}">
+                    <div class="card">
+                        <div class="content-header">
+                            <a href="" th:text="${article.getTitle()}">Header Title</a>
+                        </div>
+                        <div class="content">
+                            <p th:text="${article.getContent()}">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+                            </p>
+                        </div>
+                        <br/>
+                        <div class="card-footer1">
+                            <div>Likes: <label th:text="${article.getNumberOfLikes()}">100</label> </div>
+                            <div>Comments: <label th:text="${article.getNumberOfComments()}">100</label> </div>
+                        </div>
+                        <br/>
+                        <div class="card-footer2">
+                            <button type="button"><i class="fas fa-thumbs-up"></i></button>
+                            <button type="button"><i class="fas fa-comment"></i></button>
+                            <button type="button"
+                                    th:attr="hx-post='http://localhost:8082/favorites?articleId='+ ${article.getArticleId()}"><i class="fas fa-bookmark"></i></button>
+                            <div class="watermark">Created : Jan 1, 2024</div>
+                            <div class="watermark">Last Updated : Feb 24, 2024</div>
+                        </div>
+                        <div id="comments"></div>
+                    </div>
+                    <br/>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
