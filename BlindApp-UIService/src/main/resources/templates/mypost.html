@@ -23,7 +23,7 @@
                             <button type="button"><i class="fas fa-thumbs-up"></i></button>
                             <button type="button"><i class="fas fa-comment"></i></button>
                             <button type="button"
-                                    th:attr="hx-post='http://localhost:8082/favorites?articleId='+ ${article.getArticleId()}"><i class="fas fa-bookmark"></i></button>
+                                    th:attr="hx-post=${uiServiceURL} + '/favorites?articleId='+ ${article.getArticleId()}"><i class="fas fa-bookmark"></i></button>
                             <div class="watermark">Created : Jan 1, 2024</div>
                             <div class="watermark">Last Updated : Feb 24, 2024</div>
                         </div>

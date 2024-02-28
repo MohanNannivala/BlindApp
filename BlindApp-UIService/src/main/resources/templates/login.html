@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Welcome to Ooothla!</title>
     <meta charset="UTF-8">
@@ -26,7 +28,7 @@
         <br/>
         <div>
             <button type="submit"
-                    hx-post="http://localhost:8082/login"
+                    th:attr="hx-post= ${uiServiceURL} + '/login'"
             >login</button>
         </div>
     </form>

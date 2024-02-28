@@ -19,7 +19,7 @@
     <!-- Welcome message -->
     <!-- You can replace this button with your sign-out button -->
     <button type="button"
-            hx-post="http://localhost:8082/logout"
+            th:attr="hx-post= ${uiServiceURL} + '/logout'"
     >Sign Out</button>
 </div>
 
@@ -28,7 +28,7 @@
         <!-- Sidebar content goes here -->
         <ul>
             <a href="#"
-               hx-get="http://localhost:8082/homepage"
+               th:attr="hx-get= ${uiServiceURL} + '/homepage'"
                hx-target="#container"
                hx-select="#container"
                hx-swap="outerHTML"
@@ -36,7 +36,7 @@
             <br/>
             <br/>
             <a href="#"
-               hx-get="http://localhost:8082/createpost"
+               th:attr="hx-get= ${uiServiceURL} + '/createpost'"
                hx-target="#container"
                hx-swap="innerHTML"
                hx-push-url="true"
@@ -44,7 +44,7 @@
             <br/>
             <br/>
             <a href="#"
-               hx-get="http://localhost:8082/myPosts"
+               th:attr="hx-get= ${uiServiceURL} + '/myPosts'"
                hx-target="#container"
                hx-select="#container"
                hx-swap="outerHTML"
@@ -52,7 +52,7 @@
             <br/>
             <br/>
             <a href="#"
-               hx-get="http://localhost:8082/favorites"
+               th:attr="hx-get= ${uiServiceURL} + '/favorites'"
                hx-target="#container"
                hx-select="#container"
                hx-swap="outerHTML"
@@ -60,7 +60,7 @@
             <br/>
             <br/>
             <a href="#"
-               hx-get="http://localhost:8082/about"
+               th:attr="hx-get= ${uiServiceURL} + '/about'"
                hx-target="#container"
                hx-swap="innerHTML"
                hx-push-url="true">About</a>
@@ -93,7 +93,7 @@
                                 <button type="button"><i class="fas fa-thumbs-up"></i></button>
                                 <button type="button"><i class="fas fa-comment"></i></button>
                                 <button type="button"
-                                        th:attr="hx-post='http://localhost:8082/favorites?articleId='+ ${article.getArticleId()}"><i class="fas fa-bookmark"></i></button>
+                                        th:attr="hx-post=${uiServiceURL} + '/favorites?articleId='+ ${article.getArticleId()}"><i class="fas fa-bookmark"></i></button>
                                 <div class="watermark">Created : Jan 1, 2024</div>
                                 <div class="watermark">Last Updated : Feb 24, 2024</div>
                             </div>

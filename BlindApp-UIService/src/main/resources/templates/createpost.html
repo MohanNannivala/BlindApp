@@ -6,6 +6,6 @@
     <textarea id="content" name="content" rows="34"></textarea>
 
     <button type="button"
-            hx-post="http://localhost:8082/createpost"
+            th:attr="hx-post= ${uiServiceURL} + '/createpost'"
     >Create Post</button>
 </form>

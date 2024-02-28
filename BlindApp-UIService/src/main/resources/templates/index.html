@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Welcome to Ooothla!</title>
     <meta charset="UTF-8">
@@ -20,13 +22,13 @@
     </pre>
     <div class="btn-container">
         <button type="button"
-                hx-get="http://localhost:8082/login"
+                th:attr="hx-get= ${uiServiceURL} + '/login'"
                 hx-target="#container"
                 hx-swap="outerHTML"
                 hx-push-url="true"
         >Log in</button>
         <button type="button"
-                hx-get="http://localhost:8082/signup"
+                th:attr="hx-get= ${uiServiceURL} + '/signup'"
                 hx-target="#container"
                 hx-swap="outerHTML"
                 hx-push-url="true"

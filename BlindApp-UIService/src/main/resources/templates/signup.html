@@ -16,7 +16,7 @@
 <!--            hx-swap="innerHTML"-->
 <!--    >back</button>-->
     <button type="submit"
-            hx-post="http://localhost:8082/signup"
+            th:attr="hx-post= ${uiServiceURL} + '/signup'"
             hx-target="#container"
             hx-swap="outerHTML"
     >Signup</button>
